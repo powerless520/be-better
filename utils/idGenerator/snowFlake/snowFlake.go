@@ -16,8 +16,8 @@ const (
 	dataCenterMax   int64 = ^(-1 << dataCenterBits)                  // 数据中心ID的最大值，用于防止溢出
 	numberMax       int64 = ^(-1 << numberBits)                      // 每个节点，1秒内可生成的id序号最大值
 	timeShift       uint8 = dataCenterBits + workerBits + numberBits // 时间戳向左的偏移量
-	dataCenterShift uint8 = numberBits + dataCenterBits   // 节点id向左的偏移量
-	workerShift     uint8 = numberBits                    // 节点id向左的偏移量
+	dataCenterShift uint8 = numberBits + dataCenterBits              // 节点id向左的偏移量
+	workerShift     uint8 = numberBits                               // 节点id向左的偏移量
 	// 31位字节作为时间戳数值的话 大约68年就会用完
 	// 假如你2010年1月1日开始开发系统 如果不减去2010年1月1日的时间戳 那么白白浪费40年的时间戳啊！
 	// 这个一旦定义且开始生成ID后千万不要改了 不然可能会生成相同的ID

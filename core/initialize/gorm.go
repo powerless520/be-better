@@ -25,16 +25,16 @@ func GormMysql() *gorm.DB {
 		SkipInitializeWithVersion: false, // 根据版本自动配置
 	}
 
-	db,err := gorm.Open(mysql.New(mysqlConfig),gormConfig(m.LogMode))
-	if err != nil{
-		global.GlobalLogger.Error("Mysql启动异常",zap.Any("err",err))
+	db, err := gorm.Open(mysql.New(mysqlConfig), gormConfig(m.LogMode))
+	if err != nil {
+		global.GlobalLogger.Error("Mysql启动异常", zap.Any("err", err))
 		os.Exit(0)
 		return nil
 	}
 
-	sqlDB ,err := db.DB()
-	if err != nil{
-		global.GlobalLogger.Error("Mysql连接异常",zap.Any("err",err))
+	sqlDB, err := db.DB()
+	if err != nil {
+		global.GlobalLogger.Error("Mysql连接异常", zap.Any("err", err))
 		os.Exit(0)
 		return nil
 	}

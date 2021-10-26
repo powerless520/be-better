@@ -1,9 +1,8 @@
-package core
+package global
 
 import (
+	"be-better/utils"
 	"bytes"
-	"facm/core/global"
-	"facm/utils"
 	"fmt"
 	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
 	"github.com/sirupsen/logrus"
@@ -14,7 +13,7 @@ import (
 
 func Logger() *logrus.Logger {
 
-	var logPath = global.GVA_CONFIG.System.LogPath
+	var logPath = GlobalConfig.System.LogPath
 	logPathExists, _ := utils.PathExists(logPath)
 	if !logPathExists {
 		os.Mkdir(logPath, os.ModePerm)
@@ -74,7 +73,7 @@ func (hook *SyslogHook) getLogger(entry *logrus.Entry) *logrus.Logger {
 		filename = "Info"
 	}
 
-	writer, _ := rotatelogs.New(global.GVA_CONFIG.System.LogPath + "/Facm" + filename + "_%Y%m%d.log")
+	writer, _ := rotatelogs.New(GlobalConfig.System.LogPath + "/beBetter" + filename + "_%Y%m%d.log")
 	log.SetOutput(writer)
 	return log
 }
