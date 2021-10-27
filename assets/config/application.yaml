@@ -1,0 +1,52 @@
+# system configuration
+system:
+  log-path: '/data/logs/facm'
+
+# redis configuration
+redis:
+  db: 0
+  addr: '172.16.32.243:6480'
+  password: ''
+
+# mysql connect configuration
+mysql:
+  path: '172.16.32.243:3306'
+  config: 'charset=utf8mb4&parseTime=True&loc=Local'
+  db-name: 'facm'
+  username: 'root'
+  password: 'fivekingnet'
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: false
+  log-zap: ""
+
+dana:
+  facm:
+    url: 'http://172.16.32.238:8088/dana'
+    topic: 'dana_test'
+    token: 'fb9a0869276824eae56231a89be100f8'
+  facm-event:
+    url: 'http://172.16.32.238:8088/dana'
+    topic: 'dana_test'
+    token: 'fb9a0869276824eae56231a89be100f8'
+
+privacy-encrypt:
+  iv: '918$f85K947b%012xk46Cd7eeT151^42'
+  key: 'd01x3!8b01269b0z68f8aLfe801e3c5-'
+
+ignore-sign: true
+
+data-center-id: 0
+
+# kafka configuration
+kafka:
+  username: admin
+  password: admin-2019
+  url: '192.168.78.132:9092,192.168.78.133:9092,192.168.78.134:9092'
+  consumers:
+    facm:
+      topic: 'dana_test'
+      group-id: 'facm1018'
+    facm-event:
+      topic: 'dana_test'
+      group-id: 'facm-event1018'

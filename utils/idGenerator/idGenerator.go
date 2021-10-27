@@ -1,9 +1,9 @@
 package idGenerator
 
 import (
+	"be-better/utils/idGenerator/snowFlake"
+	"be-better/utils/idGenerator/worker"
 	"errors"
-	"facm/utils/idGenerator/snowFlake"
-	"facm/utils/idGenerator/worker"
 )
 
 var namespaceRegistry = make(map[string]IdGenerator)

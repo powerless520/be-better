@@ -11,6 +11,8 @@ require (
 	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/viper v1.9.0
 	github.com/stnc/pongo2gin v0.0.0-20210806134514-6891bb428b1c
+	github.com/ulule/limiter/v3 v3.8.0
+	gitlab.ops.kingnet.com/danadata/go-sdk/com.kingnetdc.danadata.gosdk v0.0.0-20210819113057-a21b566b6ed2
 	go.uber.org/zap v1.17.0
 	golang.org/x/text v0.3.6
 	gopkg.in/Shopify/sarama.v1 v1.20.1
@@ -50,7 +52,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
-	github.com/pkg/errors v0.8.1 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
 	github.com/spf13/afero v1.6.0 // indirect
 	github.com/spf13/cast v1.4.1 // indirect

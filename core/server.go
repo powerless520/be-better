@@ -23,5 +23,6 @@ func RunServer() {
 	appDir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
 	assetsDir := appDir + "/assets"
 	app.Static("/static", assetsDir+"/common/static")
+	router.R
 
 }
