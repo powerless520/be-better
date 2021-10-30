@@ -254,6 +254,9 @@ func UserIdcardAuthenticationNotify(idcardAuthenticationNotifyEvent dana.IdcardA
 
 func GenerateFcmAI(puid int64) string {
 	s := strconv.FormatInt(puid,10)
+
+
+
 }
 
 
